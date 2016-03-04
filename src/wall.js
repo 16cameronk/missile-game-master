@@ -21,19 +21,19 @@ MG.tunnelWall = (function (rootNode) {
             rootNode.appendChild(gradient);
 
             var gradientStart = document.createElementNS(NAMESPACE_SVG, 'stop');
-            gradientStart.setAttribute('offset', (5*NEAR_CLIPPING_PLANE / GRADIENT_START) + '');
+            gradientStart.setAttribute('offset', (10*NEAR_CLIPPING_PLANE / GRADIENT_START) + '');
             gradientStart.setAttribute('stop-color', '#ff0058');
             gradient.appendChild(gradientStart);
 
             var gradientStop = document.createElementNS(NAMESPACE_SVG, 'stop');
             gradientStop.setAttribute('offset', (5*NEAR_CLIPPING_PLANE / GRADIENT_STOP) + '');
-            gradientStop.setAttribute('stop-color', '#2fe2e2');
+            gradientStop.setAttribute('stop-color', '#ff0058');
             gradient.appendChild(gradientStop);
 
             for (var i=0; i < NUM_SEGMENTS; i++) {
 
                 mSegments[i] = document.createElementNS(NAMESPACE_SVG, 'path');
-                mSegments[i].setAttribute('class', 'wall-segment-dark');
+                mSegments[i].setAttribute('class', 'wall-segment-light');
                 mSegments[i].setAttribute('d', 'M 0,0 l 1000,50 l 0,-50 z');
 
                 mSegments[i].setAttribute('fill', 'url(#tunnel-wall-segment-fade-gradient)');
