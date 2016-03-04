@@ -131,7 +131,7 @@ MG.Barrier = function (type) {
         var fog = 100 -100*(MG.LINE_OF_SIGHT - offset)/MG.BARRIER_SPACING;
 
         mFrontPath.setAttribute('fill', '#15eded');
-        mBackPath.setAttribute('fill',    '#3ac9c9');
+        mBackPath.setAttribute('fill',    '#ff0058');
         mFrontPath.setAttribute('stroke', '#000');
         mBackPath.setAttribute('stroke',  '#000');
     };
